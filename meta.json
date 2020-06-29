@@ -1,15 +1,15 @@
 {
-    "courseId": "course-starter-python",
-    "title": "My cool online course",
-    "slogan": "A free online course",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec velit nec, consectetur placerat enim.",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna.",
+    "courseId": "numerical-methods-math3018-6141",
+    "title": "Numerical Methods",
+    "slogan": "A brief introduction",
+    "description": "This course introduces the Python useful for MATH3018/6141, the Numerical Methods course at Southampton. It assumes you have some background Python knowledge, but will remind you of the key details.",
+    "bio": "The Numerical Methods course covers linear systems, root finding, quadrature, initial and boundary value ODE problems, and linear PDEs.",
     "siteUrl": "https://course-starter-python.netlify.com",
-    "twitter": "spacy_io",
+    "twitter": "IanHawke",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
     "testTemplate": "from wasabi import Printer\n__msg__ = Printer()\n__solution__ = \"\"\"${solution}\"\"\"\n\n${solution}\n\n${test}\n\ntry:\n    test()\nexcept AssertionError as e:\n    __msg__.fail(e)",
     "juniper": {
-        "repo": "ines/course-starter-python",
+        "repo": "IanHawke/numerical-methods-course",
         "branch": "binder",
         "lang": "python",
         "kernelType": "python3",
@@ -17,9 +17,8 @@
     },
     "showProfileImage": true,
     "footerLinks": [
-        { "text": "Website", "url": "https://spacy.io" },
-        { "text": "Source", "url": "https://github.com/ines/course-starter-python" },
-        { "text": "Built with ♥", "url": "https://github.com/ines/course-starter-python" }
+        { "text": "Website", "url": "https://github.com/IanHawke/numerical-methods-course" },
+        { "text": "Source", "url": "https://github.com/IanHawke/numerical-methods-course" }
     ],
     "theme": "#de7878"
 }
