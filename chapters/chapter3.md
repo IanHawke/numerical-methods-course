@@ -1,11 +1,11 @@
 ---
-title: 'Chapter 2: Functions and packages'
+title: 'Chapter 3: Blah'
 description:
-  'Extending the quadrature example to make our method more general.'
-prev: /chapter1
-next: /chapter3
+  'Blah.'
+prev: /chapter2
+next: null
 type: chapter
-id: 2
+id: 3
 ---
 
 <exercise id="1" title="Functions" type="slides">

@@ -1,8 +1,7 @@
 ---
 title: 'Chapter 1: Getting started'
 description:
-  'This chapter will teach you about many cool things and introduce you to the
-  most important concepts of the course.'
+  'Using quadrature to look at variables and loops.'
 prev: null
 next: /chapter2
 type: chapter
