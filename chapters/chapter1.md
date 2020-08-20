@@ -18,7 +18,7 @@ id: 1
 
 <exercise id="2" title="Getting Started">
 
-What would you type in the terminal to compute $2.3^{4.5}$?
+What would you type in the terminal to compute \\(2.3^{4.5}\\)?
 
 <choice id="ch1_q1">
 

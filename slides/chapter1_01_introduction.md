@@ -11,11 +11,11 @@ Notes: This is a course covering the essentials of Python needed for Numerical M
 # Integration
 
 We are going to need to do numerical integration. For example, computing
-$$
-\begin{aligned}
-  I_1 &= \int_0^1 \text{d}x \, x^2 = \tfrac{1}{3}, \\ I_2 &= \int_0^1 \text{d}x \, \sqrt{1 - x^2} = \tfrac{\pi}{4}.
-\end{aligned}
-$$
+\\[
+\\begin{aligned}
+  I_1 &= \int_0^1 \text{d}x \\, x^2 = \tfrac{1}{3}, \\\\ I_2 &= \int_0^1 \text{d}x \\, \sqrt{1 - x^2} = \tfrac{\pi}{4}.
+\\end{aligned}
+\\]
 
 <img src="/chapter1/ch1_quad1.png" alt="The integrals we will look at." />
 
@@ -71,7 +71,7 @@ Notes: We will be using Python version 3. For arithmetic there are few surprises
 
 # Quadrature by arithmetic
 
-We could compute the integral of $x^2$ on $[0, 1]$ using $4$ strips as
+We could compute the integral of \\(x^2\\) on \\([0, 1]\\) using \\(4\\) strips as
 
 ```python
 (0**2 + (1/4)**2 + (2/4)**2 + (3/4)**2) * 1/4
