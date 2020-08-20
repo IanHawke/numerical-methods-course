@@ -18,26 +18,14 @@ id: 1
 
 <exercise id="2" title="Getting Started">
 
-Let's ask some questions about the slides. Whats the correct answer?
+What would you type in the terminal to compute $2.3^{4.5}$?
 
-<choice>
-<opt text="Answer one">
+<choice id="ch1_q1">
 
-This is not the correct answer.
+<opt text="`pow(2.3, 4.5)`">This would work in the C programming language, but not in Python.</opt>
+<opt text="`2.3^4.5`">This would work in Matlab, but would give something very odd in Python.</opt>
+<opt text="`2.3**4.5`" correct="true">This is correct: well done.</opt>
 
-</opt>
-
-<opt text="Answer two" correct="true">
-
-Good job!
-
-</opt>
-
-<opt text="Answer three">
-
-This is not correct either.
-
-</opt>
 </choice>
 
 </exercise>

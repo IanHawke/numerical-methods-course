@@ -4,36 +4,41 @@ type: slides
 
 # Introduction
 
-Notes: Text at the end of a slide prefixed like this will be displayed as
-speaker notes on the side. Slides can be separated with a divider: ---.
+Notes: This is a course covering the essentials of Python needed for Numerical Methods for differential equations. It assumes you've seen some Python before, but reminds you of the key commands and approaches.
 
 ---
 
-# This is a slide
+---
+
+# Spyder
+
+- Python reads text typed into files or terminals and runs the commands.
+- Spyder has an editor (left window) for files and built-in terminals (bottom right window).
+- The top right window shows the help, plots, or other useful things.
+
+<img src="/chapter1/spyder.jpg" alt="The Spyder window" />
+
+Notes: Python is free and there are many ways that you can write and run Python code. We generally recommend the Anaconda distribution. Within that you will automatically get `Spyder`, which simplifies editing and running code, which we also recommend. You can also get `VSCode` and other alternatives, and should use whichever you prefer.
+
+# Arithmetic
+
+Try arithmetic commands in the terminal:
 
 ```python
-# Print something
-print("Hello world")
+(1 + 2.3 * 4.5) / 6.7**8.9
 ```
 
 ```out
-Hello world
+5.045800988343705e-07
 ```
 
-- Slides can have code, bullet points, tables and pretty much all other Markdown
-  elements.
-- This is another bullet point.
+- The terminal gives output immediately to the screen.
+- More complex mathematics doesn't work immediately in base Python.
 
-<img src="profile.jpg" alt="This image is in /static" width="25%">
-
-Notes: Some more notes go here
+Notes: We will be using Python version 3. For arithmetic there are few surprises, but care is needed for division. When dividing integers, like `1/4`, Python version 3 will treat them as real numbers and return `0.25`. In earlier versions of Python the division of two integers would be an integer, and `1/4` would return `0`.
 
 ---
 
 # Let's practice!
 
-Notes: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique
-libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non
-commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat
-semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec
-velit nec, consectetur placerat enim.
+---
