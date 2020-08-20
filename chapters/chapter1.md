@@ -22,9 +22,21 @@ What would you type in the terminal to compute $2.3^{4.5}$?
 
 <choice id="ch1_q1">
 
-<opt text="`pow(2.3, 4.5)`">This would work in the C programming language, but not in Python.</opt>
-<opt text="`2.3^4.5`">This would work in Matlab, but would give something very odd in Python.</opt>
-<opt text="`2.3**4.5`" correct="true">This is correct: well done.</opt>
+<opt text="<code>pow(2.3, 4.5)</code>">
+
+This would work in the C programming language, but not in Python.
+
+</opt>
+<opt text="<code>2.3^4.5</code>">
+
+This would work in Matlab, but would give something very odd in Python.
+
+</opt>
+<opt text="<code>2.3**4.5</code>" correct="true">
+
+This is correct: well done.
+
+</opt>
 
 </choice>
 

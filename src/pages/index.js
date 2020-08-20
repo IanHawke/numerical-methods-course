@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import { Link } from '../components/link'
-import Logo from '../../static/logo.svg'
+import Logo from '../../static/University_of_Southampton_Logo.svg'
 
 import classes from '../styles/index.module.sass'
 
@@ -19,14 +19,14 @@ export default ({ data }) => {
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
 
             <section>
-                <h1 className={classes.subtitle}> INSERT CATCHY TAG LINE HERE </h1>
+                <h1 className={classes.subtitle}> Code to solve differential equations </h1>
                 <div className={classes.introduction}>
                 <p>
-                    This is a good place to write what your course is about!  Dinosaurs? Neural Networks? LSTM? How to do taxes and not get bored? Write it here!   
+                    The Southampton <em>Numerical Methods</em> course (MATH3018/6141) introduces the steps needed to solve differential equations. This is a refresher course covering the Python coding needed to implement and test those methods.
                 </p>
                 </div>
             </section>
-            
+
             {chapters.map(({ slug, title, description }) => (
                 <section key={slug} className={classes.chapter}>
                     <h2 className={classes.chapterTitle}>
