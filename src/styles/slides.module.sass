@@ -58,9 +58,30 @@
             padding: 0.5rem 1rem !important
             border-radius: var(--border-radius)
             background: var(--syntax-background)
-            color: var(--syntax-text)
             position: relative
+            font-family: var(--font-code)
+            font-size: var(--font-size-sm)
+            color: var(--syntax-text)
+            word-wrap: break-word
 
+            .comment
+                color: var(--syntax-comment)
+
+            .keyword, .builtin
+                color: var(--syntax-keyword)
+
+            .operator
+                color: var(--syntax-operator)
+
+            .string
+                color: var(--syntax-selector)
+
+            .number
+                color: var(--syntax-number)
+
+            .def
+                color: var(--syntax-function)
+                
         pre code.language-out
             background: var(--syntax-text)
             color: var(--syntax-background)
