@@ -8,9 +8,9 @@ type: chapter
 id: 3
 ---
 
-<exercise id="1" title="Functions" type="slides">
+<exercise id="1" title="numpy" type="slides">
 
-<slides source="chapter2_01_functions">
+<slides source="chapter3_01_numpy">
 </slides>
 
 </exercise>
