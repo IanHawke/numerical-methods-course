@@ -1,7 +1,7 @@
 ---
-title: 'Chapter 3: Blah'
+title: 'Chapter 3: numpy'
 description:
-  'Blah.'
+  'For numerical work we save a lot of time and effort using the powerful numpy package. We will rewrite and extend our quadrature examples using that.'
 prev: /chapter2
 next: null
 type: chapter
