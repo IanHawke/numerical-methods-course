@@ -47,7 +47,7 @@ print(x + x)
 [0.0, 1.0, 2.0]
 ```
 
-Notes: Python lists are collections of things. The square brackets define the list. Each item in the list is separated by a comma. To access an item again use square brackets, using the index (starting from zero) into the list. Lists behave a bit like sets - if you add two sets you get the items in the list added. With <code>numpy</code>, you create the vector (or array) using the <code>numpy.array</code> function, which turns the list into something that acts like a vector. Accessing items works the same way as for lists. However, mathematical operations are applied to each element of the list. This is very powerful for numerical methods.
+Notes: Python lists are collections of things. The square brackets define the list. Each item in the list is separated by a comma. To access an item again use square brackets, using the index (starting from zero) into the list. Lists behave a bit like sets - if you add two sets you get the items in the list added. With <code>numpy</code>, you create the vector (or array) using the <code>numpy.array</code> function, which turns the list into something that acts like a vector. Accessing items works the same way as for lists. However, mathematical operations are applied to each element of the list. This is very powerful for numerical methods.<br>There is one weakness of <code>numpy</code> arrays. These arrays must contain the same type of things. Python lists, however, can contain different things in the same list. For numerical methods we will mostly use floating point numbers, so this is not a problem.
 
 ---
 
@@ -89,7 +89,7 @@ print(integrand)
 ```output
 [0.     0.0625 0.25   0.5625]
 ```
-To compute our integrand \\(\\sqrt(1-x^2)\\) on the grid, use
+To compute our integrand \\(\\sqrt{1-x^2}\\) on the grid, use
 ```python
 integrand = np.sqrt(1 - x**2)
 print(integrand)
@@ -142,7 +142,7 @@ x, dx = np.linspace(0, 1, num=nstrips, endpoint=True, retstep=True)
 integral = dx / 2 * (f(x[0]) + f(x[-1]) + 2 * np.sum(f(x[1:-1])))
 ```
 
-Notes: Sometimes we want to work on <em>part</em> of an array, not all of it. One example would be the trapezoidal rule. This is much more accurate that the Riemann integral approximation we have used so far. In this case the first and last points of the grid (which now must lie on the boundaries of the interval) are treated differently to all other points. The integrand at the boundary gets half the weight of the integrand at all other points.<br>To code this we need to access individual points (the first and last, corresponding to the boundaries), and all the points in the interior. We have seen how to access the first. We use square brackets, and the zero index gives the first point. For the last point, Python allows us to count from the end using negative integers, where <code>-1</code> is the last point, <code>-2</code> next to last, and so on. To access all the interior points we use a <em>slice</em>. Within the square brackets we give the start and end indexes, with a <code>:</code> between them. This returns an array with all the value from the start up to, but not including, the end. So we start from the second point (index <code>1</code>) and go up to, but not including, the last (index <code>-1</code>). The sum is used as before.<br>Note that as we need a point on the right boundary the code defining the grid has changed the <code>endpoint</code> argument.
+Notes: Sometimes we want to work on <em>part</em> of an array, not all of it. One example would be the trapezoidal rule. This is much more accurate that the Riemann integral approximation we have used so far. In this case the first and last points of the grid (which now must lie on the boundaries of the interval) are treated differently to all other points. The integrand at the boundary gets half the weight of the integrand at all other points.<br>To code this we need to access individual points (the first and last, corresponding to the boundaries), and all the points in the interior. We have seen how to access the first. We use square brackets, and the zero index gives the first point. For the last point, Python allows us to count from the end using negative integers, where <code>-1</code> is the last point, <code>-2</code> next to last, and so on. To access all the interior points we use a <em>slice</em>. Within the square brackets we give the start and end indexes, with a <code>:</code> between them. This returns an array with all the value from the start up to, but not including, the end. So we start from the second point (index <code>1</code>) and go up to, but not including, the last (index <code>-1</code>). The sum is used as before.<br>Note that as we need a point on the right boundary the code defining the grid has changed the <code>endpoint</code> argument.<br>We can also use slicing to select every <code>n</code>th point. For example, <code>x[1:-1:2]</code> selects points <code>2, 4, 6, ...</code> up to, but not including, the last point.
 
 ---
 
