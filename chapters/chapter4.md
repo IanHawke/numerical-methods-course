@@ -1,0 +1,35 @@
+---
+title: 'Chapter 4: plotting'
+description:
+  'When we check are results we would like to clearly communicate when, and how, they are correct. This is often best done with a plot.'
+prev: /chapter3
+next: /chapter1
+type: chapter
+id: 4
+---
+
+<exercise id="1" title="matplotlib" type="slides">
+
+<slides source="chapter4_01_matplotlib">
+</slides>
+
+</exercise>
+
+<exercise id="2" title="Plotting a line">
+
+Plot \\(\sin(x)\\) against \\(x \\in [0, 10]\\).
+
+Modify the skeleton code so that
+
+- `numpy` is imported with the short name `np`;
+- `matplotlib.pyplot` is imported with the short name `plt`;
+- the grid `x` is evenly spaced with `50` points;
+- the plot appears on the screen.
+
+<codeblock id="04_02">
+
+Check against the slide. The <code>%matplotlib inline</code> line is needed to display plots in the browser, not in standalone Python scripts.
+
+</codeblock>
+
+</exercise>

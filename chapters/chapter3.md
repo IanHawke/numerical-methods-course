@@ -3,7 +3,7 @@ title: 'Chapter 3: numpy'
 description:
   'For numerical work we save a lot of time and effort using the powerful numpy package. We will rewrite and extend our quadrature examples using that.'
 prev: /chapter2
-next: /chapter1
+next: /chapter4
 type: chapter
 id: 3
 ---
