@@ -84,7 +84,9 @@ Notes: The previous plots looked a little odd as the plot domain extended outsid
 
 <img src="/chapter4/ch4_plot1_multiple.png" alt="Two integrands plotted against the independent variable with different linestyles." width="40%" align="right"/>
 
-To add two lines to the plot, add more plot commands. To tell which is which use linestyles and markers:
+To add two lines to the plot, add more plot commands.
+
+To tell which is which use linestyles and markers:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
