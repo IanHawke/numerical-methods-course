@@ -79,3 +79,10 @@ Check against the slides.
 </codeblock>
 
 </exercise>
+
+<exercise id="5" title="Subplots" type="slides">
+
+<slides source="chapter4_02_matplotlib_subplots">
+</slides>
+
+</exercise>
