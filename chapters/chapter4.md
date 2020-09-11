@@ -28,7 +28,29 @@ Modify the skeleton code so that
 
 <codeblock id="04_02">
 
-Check against the slide. The <code>%matplotlib inline</code> line is needed to display plots in the browser, not in standalone Python scripts.
+Check against the slides.
+
+</codeblock>
+
+</exercise>
+
+<exercise id="3" title="Labels and ranges">
+
+Plot \\(\sin(x)\\) against \\(x \\in [0, 10]\\). Add axis labels, a title, and fix the limits in \\(x\\) to \\([1, 8]\\).
+
+Modify the skeleton code so that
+
+- `numpy` is imported with the short name `np`;
+- `matplotlib.pyplot` is imported with the short name `plt`;
+- the grid `x` is evenly spaced with `50` points;
+- the axis labels are `x` and `$\sin(x)$` as appropriate;
+- the title is `Titled plot`;
+- the `x` limits are as required;
+- the plot appears on the screen.
+
+<codeblock id="04_03">
+
+Check against the slides.
 
 </codeblock>
 

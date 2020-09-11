@@ -1,4 +1,3 @@
-%matplotlib inline
 import ___ as np
 import ___ as plt
 
