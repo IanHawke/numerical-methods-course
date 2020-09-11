@@ -8,17 +8,25 @@ Notes: Using plots to check results and communicate correctness is a key part of
 
 ---
 
-# Vectors and quadrature
+# Plotting a line
 
-We approximate
+We wanted to approximate
 \\[
-  \int \text{d} x \\, f(x) \\simeq \\sum_{i=0}^N w_i f(x_i).
+  \int_0^1 \text{d} x \\, \sqrt{1 - x^2}.
 \\]
-That is, we evaluate the integrand \\(f\\) on a grid of (\\(N+1\\)) points \\(\{x_i\}\\) and combine them using a set of weights \\(\{w_i\}\\).
+What does the integrand look like?
 
-In previous examples the grid were equally spaced and the weights were the same.
+To plot a simple line, use `matplotlib` with `numpy`:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace(0, 1)
+plt.plot(x, np.sqrt(1 - x**2))
+```
+<img src="/chapter4/ch4_plot1.png" alt="The integrand plotted against the independent variable." />
 
-Notes: In previous chapters we approximated the quadrature by splitting the domain into strips, picking one point in each strip, evaluating the integrand at that point, and computing the area of the strip by multiplying the integrand by the width of the strip. In this chapter we replace the strips with the points directly, leading to the grid of points. We also replace the width with the weights. This gives a form that we can generalise for more accuracy later. The key point is that we have <em>vectors</em> of weights and grid points, from which we can form a vector (the summand) which we will sum to get the approximation to the integral.
+
+Notes: Plotting can give us important qualitative information quickly. For example, is the integrand finite and continuous over the domain? To check this, we want to plot the integrand against the independent variable.<br>With Python, the standard plotting library is <code>matplotlib</code>. This has a default interface <code>pyplot</code>, which is designed to work with <code>numpy</code>. So first we <code>import</code> the <code>numpy</code> and <code>matplotlib.pyplot</code> packages. We then approximate the independent variable using a grid of points across the domain, using <code>linspace</code> with the default number of points. Finally, a line plot is produced with the <code>plot</code> command, which plots the integrand against the independent variable.<br>You should note that sometimes it is necessary to explicitly tell Python to show the plot using the <code>plt.show()</code> command.
 
 ---
 
