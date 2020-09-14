@@ -86,3 +86,24 @@ Check against the slides.
 </slides>
 
 </exercise>
+
+<exercise id="6" title="Subplots">
+
+Plot \\(x^3\\) against \\(x \\in [10^{-4}, 10]\\). Two subplots should be created. The left subplot should use linear scales. The right subplot should use logarithmic scales. The \\(x\\) axis should be labelled `x` for both subplots. Otherwise, defaults should be used.
+
+Modify the skeleton code so that
+
+- `numpy` is imported with the short name `np`;
+- `matplotlib.pyplot` is imported with the short name `plt`;
+- the grid `x` is evenly spaced with `50` points;
+- the axis labels are `x` as appropriate;
+- two subplots with appropriate scales appear in one row;
+- the plot appears on the screen.
+
+<codeblock id="04_06">
+
+Check against the slides.
+
+</codeblock>
+
+</exercise>
