@@ -3,7 +3,7 @@ title: 'Chapter 4: plotting'
 description:
   'When we check are results we would like to clearly communicate when, and how, they are correct. This is often best done with a plot.'
 prev: /chapter3
-next: /chapter1
+next: /chapter5
 type: chapter
 id: 4
 ---
