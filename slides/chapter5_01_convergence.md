@@ -12,14 +12,14 @@ Notes: We have seen and coded three methods for approximating integrals. But how
 
 We saw three methods to approximate
 \\[
-  I = \int_a^b \text{d} x \, f(x).
+  I = \int_a^b \text{d} x \\, f(x).
 \\]
 Methods needed grid, width \\(\\Delta x\\). Errors scale:
 \\[
 \\begin{aligned}
-  {\cal E}_{\text{Riemann}} &\propto \max | f^{(1)} | \, \left( \Delta x \right)^1, \\
-  {\cal E}_{\text{Trapezoidal}} &\propto \max | f^{(2)} | \, \left( \Delta x \right)^2, \\
-  {\cal E}_{\text{Simpson}} &\propto \max | f^{(4)} | \, \left( \Delta x \right)^4.
+  {\cal E}\_{\text{Riemann}} &\propto \max | f^{(1)} | \\, \left( \Delta x \right)^1, \\\\
+  {\\cal E}\_{\text{Trapezoidal}} &\propto \max | f^{(2)} | \\, \left( \Delta x \right)^2, \\\\
+  {\\cal E}\_{\text{Simpson}} &\propto \max | f^{(4)} | \\, \left( \Delta x \right)^4.
 \\end{aligned}
 \\]
 How to check?

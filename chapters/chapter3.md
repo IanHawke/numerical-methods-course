@@ -27,17 +27,17 @@ l2 = [1, 2, "3"]
 
 <choice id="ch3_q2">
 
-<opt text="<code>x = array(l1)</code">
+<opt text="<code>x = array(l1)</code>">
 
 This will not work as <code>array</code> is a <code>numpy</code> function, so must be referred to as <code>np.array</code>.
 
 </opt>
-<opt text="<code>x = np.array(l1)</code" correct="true">
+<opt text="<code>x = np.array(l1)</code>" correct="true">
 
 Yes, this would be the syntax to define an array from a list.
 
 </opt>
-<opt text="<code>x = np.array(l2)</code">
+<opt text="<code>x = np.array(l2)</code>">
 
 This will not work as <code>numpy</code> arrays must contain the same type of variable. In the list <code>l2</code> there are numbers (integers, such as <code>1</code>) but also a string (<code>"3"</code>), so this will fail.
 

@@ -15,20 +15,54 @@ id: 5
 
 </exercise>
 
-<exercise id="2" title="Plotting a line">
+<exercise id="2" title="Testing Simpson's rule">
 
-Plot \\(\sin(x)\\) against \\(x \\in [0, 10]\\).
+Which of the following polynomials is best to check the local error of a code implementing Simpson's rule?
+
+Remember that
+\\[
+{\\cal E}\_{\text{Simpson}} \propto \max | f^{(4)} | \\, \left( \Delta x \right)^4.
+\\]
+
+<choice id="ch5_q2">
+
+<opt text="\\(x^2 + x + 1\\)">
+
+This is not general enough, given the local error of Simpson's rule.
+
+</opt>
+<opt text="\\(x^4 + 2 x^3 - 3 x^2 + 4 x - 1\\)">
+
+This polynomial has too high an order for Simpson's rule to represent exactly, so would not make an ideal test.
+
+</opt>
+<opt text="\\(x^3 - 2 x^2 + 3 x + 1\\)" correct="true">
+
+This polynomial is not too symmetric, and is the highest order polynomial that can be represented exactly by Simpson's method.
+
+</opt>
+
+</choice>
+
+</exercise>
+
+<exercise id="3" title="Coding Simpson's Rule">
+
+Code the best integrand from the previous exercise, and use it to check that the provided function is correct. If not, fix it.
 
 Modify the skeleton code so that
 
-- `numpy` is imported with the short name `np`;
-- `matplotlib.pyplot` is imported with the short name `plt`;
-- the grid `x` is evenly spaced with `50` points;
-- the plot appears on the screen.
+- the integrand is defined in the function `integrand_exact`;
+- the provided `simpson` function gives the exact solution for this integrand.
 
-<codeblock id="04_02">
+Note that the exact solution for the quadrature will be
+\\[
+\tfrac{1}{4}(b^4 - a^4) - \tfrac{2}{3}(b^3 - a^3) + \tfrac{3}{2}(b^2 - a^2) + (b - a).
+\\]
 
-Check against the slides.
+<codeblock id="05_03">
+
+You can check the code and algorithm for Simpson's rule in chapter 3, or in the course notes.
 
 </codeblock>
 

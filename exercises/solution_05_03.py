@@ -1,0 +1,11 @@
+import numpy as np
+
+def integrand_exact(x):
+    return x**3 - 2*x**2 + 3*x + 1
+
+def simpson(f, a, b, nstrips):
+    x, dx = np.linspace(a, b, num=nstrips, endpoint=True, retstep=True)
+    return dx / 3 * (f(x[0]) + f(x[-1]) + 4 * np.sum(f(x[1:-1:2])) + 2 * np.sum(f(2[1:-1:2])))
+
+check1 = simpson(integrand_exact, 0, 1, 11) - 25/12
+print(check1)
