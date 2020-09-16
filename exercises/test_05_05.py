@@ -8,7 +8,7 @@ def test():
     assert "import numpy as np" in __solution__, "Have you imported numpy in its short form?"
     assert "import matplotlib.pyplot as plt" in __solution__, "Have you imported pyplot in its short form?"
 
-    assert np.allclose((s, log_C), (3.863568238574405, -6.413802170416763)), "Have you computed the best fit line correctly?"
+    assert np.allclose((s, log_C), (3.99955988203847, -5.844916461863553)), "Have you computed the best fit line correctly?"
 
     try:
         ax = plt.gca()
@@ -19,7 +19,7 @@ def test():
 
     assert ax.get_xlabel() == r"$\Delta x$", "Have you set the x label correctly?"
     assert ax.get_ylabel() == "Errors", "Have you set the y label correctly?"
-    assert (leg.get_texts()[0].get_text() == r"Simpson's rule") and (leg.get_texts()[1].get_text() == r"$s = 3.86$"), "Have you set the legend labels correctly?"
+    assert (leg.get_texts()[0].get_text() == r"Simpson's rule") and (leg.get_texts()[1].get_text() == r"$s = 4.00$"), "Have you set the legend labels correctly?"
     assert ax.get_title() == "Convergence of Simpson's rule", "Have you set the plot title correctly?"
     for l in lines:
         assert np.allclose(l.get_data()[0], dx), "Have you used the correct array on the x axis?"
