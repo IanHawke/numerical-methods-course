@@ -78,7 +78,7 @@ compute the errors from Simpson's rule when approximating the quadrature
 \\[
   \\int_0^1 \text{d} x \\, f(x) = 2 \\sin(1) + \\cos(1) - 2.
 \\]
-Use \\(10 \times 2^{0, \dots, 9}\\) strips.
+Use \\(10 \times 2^{0, \dots, 7}\\) strips.
 
 Modify the skeleton code so that
 

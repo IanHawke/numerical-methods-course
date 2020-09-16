@@ -11,7 +11,7 @@ def test():
     x = np.linspace(-1, 1)
     assert np.allclose(integrand_sin(x), i_exact(x)), "Have you set up the integrand_sin function correctly?"
 
-    assert np.allclose(nstrips_all, 10 * 2**np.arange(10)), "Have you set up the nstrips_all variable correctly?"
+    assert np.allclose(nstrips_all, 10 * 2**np.arange(8)), "Have you set up the nstrips_all variable correctly?"
 
     vals = [(0, 1, 10, 0.22324398545899074),
             (0, 1, 50, 0.22324427502018113),
@@ -20,7 +20,7 @@ def test():
     for (a, b, ns, sol) in vals:
         assert np.allclose(simpson(i_exact, a, b, ns) - sol, 0), f"The value from the simpson function does not match for a={a}, b={b}, nstrips={ns}"
 
-    errs_expected = np.array([2.90024942e-07, 1.81177624e-08, 1.13222279e-09, 7.07618131e-11, 4.42260117e-12, 2.76473289e-13, 1.73194792e-14, 1.08246745e-15, 5.55111512e-17, 2.77555756e-17])
+    errs_expected = np.array([2.90024942e-07, 1.81177624e-08, 1.13222279e-09, 7.07618131e-11, 4.42260117e-12, 2.76473289e-13, 1.73194792e-14, 1.08246745e-15])
     assert(np.allclose(errs, errs_expected)), "The errors in the errs variable do not match expectations. Is your loop correct? Have you compared to the correct exact value?"
 
     __msg__.good("Well done!")
