@@ -8,7 +8,10 @@ def test():
     assert "import numpy as np" in __solution__, "Have you imported numpy in its short form?"
     assert "import matplotlib.pyplot as plt" in __solution__, "Have you imported pyplot in its short form?"
 
-    assert np.allclose((s, log_C), (3.99955988203847, -5.844916461863553)), "Have you computed the best fit line correctly?"
+    # The particular values seem to be very sensitive, as
+    # the highest resolution errors are near machine zero.
+    # So make the tolerance much slacker here.
+    assert np.allclose((s, log_C), (3.99955988203847, -5.844916461863553), atol=1e-4, rtol=1e-4), "Have you computed the best fit line correctly?"
 
     try:
         ax = plt.gca()
