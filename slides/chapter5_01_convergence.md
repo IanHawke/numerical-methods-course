@@ -78,6 +78,32 @@ Notes: For more general integrands than simple polynomials we expect the method 
 
 ---
 
+# Computing errors
+
+Before we can plot we need to compute the errors.
+
+First construct an array of number of strips:
+```python
+nstrips_all = 10 * 2**np.arange(10)
+```
+Then the domain, grid spacings, and an empty array for the errors:
+```python
+a = 0
+b = 1
+dx = (b - a) / nstrips_all
+errs = np.zeros(len(nstrips_all))
+```
+Finally, loop to compute the error:
+```python
+for i in range(len(nstrips_all)):
+    errs[i] = abs(quadrature(f, a, b, nstrips_all[i]) - exact)
+```
+We can now use `dx` and `errs` to do the plotting.
+
+Notes: Setting up the arrays to produce the convergence plots can be simplified using some <code>numpy</code> functions. What we need to know in advance is the domain on which the integral is computed (specified by <code>a</code> and <code>b</code>, the endpoints of the domain) and the exact value of the integral <code>exact</code>. We then want to compute our approximation multiple times, using different values of the grid spacing <code>dx</code> (corresponding to different numbers of strips <code>nstrips</code>), and store the results. This is naturally done with a loop.<br>First we have to construct an array containing the number of strips we are going to use. As we are going to expect power law behaviour, it is natural to use a power law to construct the number of strips. Here we use \\(10 \times 2^{0, 1, \dots, 9} = 10, 20, \dots, 5120\\). This is fairly arbitrary, but using powers of two is the smallest step guaranteed to give integers. The <code>np.arange</code> function works exactly like <code>range</code>, but produces a <code>numpy</code> <code>array</code>, which means we can immediately use it in the exponent.<br> We then set up the grid spacings. As <code>nstrips_all</code> is an <code>array</code>, the line defining <code>dx</code> makes it an array as well.<br>We define an <code>array</code> just containing zeros to hold the errors, <code>errs</code> This has the same size as <code>nstrips_all</code>. This means the array to hold the errors is ready for when we do the loop.<br>Finally we loop over all the values of <code>nstrips</code>. For each value we compute the result from the quadrature and compute the magnitude of the difference between the value and the exact solution. This is stored in <code>errs</code>. We can now use <code>dx</code> and <code>errs</code> to produce the convergence plot as in the previous slide.
+
+---
+
 # Let's practice!
 
 Notes: Mark this section as complete and move on to the exercises. Come back to these slides to refresh your memory if needed.

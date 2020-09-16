@@ -67,3 +67,30 @@ You can check the code and algorithm for Simpson's rule in chapter 3, or in the 
 </codeblock>
 
 </exercise>
+
+<exercise id="4" title="Errors from Simpson's Rule">
+
+Using the integrand
+\\[
+  f(x) = x^2 \\sin(x),
+\\]
+compute the errors from Simpson's rule when approximating the quadrature
+\\[
+  \\int_0^1 \text{d} x \\, f(x) = 2 \\sin(1) + \\cos(1) - 2.
+\\]
+Use \\(10 \times 2^{0, \dots, 9}\\) strips.
+
+Modify the skeleton code so that
+
+- the integrand is defined in the function `integrand_sin`;
+- the `simpson` function approximates the quadrature;
+- the number of strips is encoded in `nstrips_all`;
+- the error values are encoded in `errs`.
+
+<codeblock id="05_04">
+
+You can check the code and algorithm for Simpson's rule in chapter 3, or in the course notes, or in the solution to the previous exercise. You can check the slides for how to compute the errors.
+
+</codeblock>
+
+</exercise>
