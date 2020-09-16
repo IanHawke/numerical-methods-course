@@ -71,7 +71,7 @@ s, log_C = np.polyfit(np.log(dx), np.log(errs), 1)
 Then plot:
 ```python
 plt.loglog(dx, errs, 'kx', label="Random data")
-plt.loglog(dx, np.exp(log_C) * dx**s, 'b-', label=fr"$s = {s:2f}$")
+plt.loglog(dx, np.exp(log_C) * dx**s, 'b-', label=fr"$s = {s:.2f}$")
 ```
 
 Notes: For more general integrands than simple polynomials we expect the method to have a numerical error, and the analysis in the notes shows how that scales with the grid resolution. We can then use some general integrand whose exact integral we can compute, and check that the numerical error of the code scales as we expect.<br>The error in general is a power series in the grid spacing. However, it is only the leading term (smallest power of \\(\Delta x\\)) that we care about. To measure this it is best to take logarithms of the error and grid spacing. The best-fit <em>straight line</em> of \\(\log {\cal E}\\) against \\(\log ( \Delta x )\\) has slope which is the measured convergence rate \\(s\\). This is the smallest power of \\(\Delta x\\) in the power series, and can be compared to the value from the analysis.<br><code>numpy</code> has a function that computes best fit polynomials, which is <code>polyfit</code>. We only want a straight line, so the degree is <code>1</code>, and it returns the slope and the intersection. The slope is the key number, but it is important to check that the fit makes sense (there may be outliers!). We can do this using a <code>loglog</code> plot, which we can annotate with the convergence rate.
