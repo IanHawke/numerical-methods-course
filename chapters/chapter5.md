@@ -94,3 +94,24 @@ You can check the code and algorithm for Simpson's rule in chapter 3, or in the 
 </codeblock>
 
 </exercise>
+
+<exercise id="5" title="Convergence plot for Simpson's Rule">
+
+Plot the errors from Simpson's rule when approximating the quadrature in the last exercise. The grid spacings and errors are imported for you. You should measure the convergence rate and annotate the plot appropriately.
+
+Modify the skeleton code so that
+
+- the coefficients for the best fit line are computed by `polyfit` and stored in `s`, `log_C` as appropriate;
+- the numerical errors are plotted, with label `"Simpson's rule"`;
+- the best fit line is plotted, with a label `"$s = {...}$"`, filling in the convergence rate to two decimal places (automatically!);
+- the plot has a legend;
+- the plot is annotated with labels `"$\Delta x$"` and `"Errors"` as appropriate;
+- the plot has the title `"Convergence of Simpson's rule"`.
+
+<codeblock id="05_05">
+
+You can check how to produce the plot on the slides.
+
+</codeblock>
+
+</exercise>
