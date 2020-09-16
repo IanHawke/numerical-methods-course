@@ -1,6 +1,6 @@
 import ___ as ___
 
-def quadrature(f, a, b, N):
+def quadrature(f, a, b, nstrips):
     '''
     Document this function!
     '''

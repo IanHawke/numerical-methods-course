@@ -1,6 +1,6 @@
 import ___ as ___
 
-def simpson(f, a, b, N):
+def simpson(f, a, b, nstrips):
     '''
     Document this function!
     '''

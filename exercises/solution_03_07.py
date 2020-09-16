@@ -1,6 +1,6 @@
 import numpy as np
 
-def simpson(f, a, b, N):
+def simpson(f, a, b, nstrips):
     '''
     Compute the quadrature of f on [a, b].
 
@@ -13,8 +13,8 @@ def simpson(f, a, b, N):
         The start of the domain
     b : float
         The end of the domain
-    N : int
-        The number of strips, which is the number of gridpoints
+    nstrips : int
+        The number of strips
 
     Returns
     -------
@@ -22,5 +22,5 @@ def simpson(f, a, b, N):
     I : float
         The integral approximation
     '''
-    x, dx = np.linspace(a, b, num=N, endpoint=True, retstep=True)
+    x, dx = np.linspace(a, b, num=2*nstrips+1, endpoint=True, retstep=True)
     return dx / 3 * (f(x[0]) + f(x[-1]) + 4 * np.sum(f(x[1:-1:2]))+ 2 * np.sum(f(x[2:-1:2])))

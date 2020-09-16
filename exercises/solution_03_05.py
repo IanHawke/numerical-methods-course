@@ -1,6 +1,6 @@
 import numpy as np
 
-def quadrature(f, a, b, N):
+def quadrature(f, a, b, nstrips):
     '''
     Compute the quadrature of f on [a, b].
 
@@ -13,7 +13,7 @@ def quadrature(f, a, b, N):
         The start of the domain
     b : float
         The end of the domain
-    N : int
+    nstrips : int
         The number of strips, which is the number of gridpoints
 
     Returns
@@ -22,5 +22,5 @@ def quadrature(f, a, b, N):
     I : float
         The integral approximation
     '''
-    x, dx = np.linspace(a, b, num=N, endpoint=False, retstep=True)
+    x, dx = np.linspace(a, b, num=nstrips, endpoint=False, retstep=True)
     return dx * np.sum(f(x))

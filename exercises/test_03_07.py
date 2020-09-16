@@ -9,8 +9,8 @@ def test():
     # If an assertion fails, the message will be displayed
     assert "import numpy as np" in __solution__, "Have you imported numpy in its short form?"
     assert "np.sum" in __solution__, "Have you used the sum function from numpy?"
-    assert abs(simpson(integrand_1, 0, 1, 100) - 0.33000034010135026) < 1e-10, "The quadrature, applied to x^2 on [0, 1], does not return the expected value?"
-    assert abs(simpson(integrand_1, 1, 2, 100) - 2.3199333401353606) < 1e-10, "The quadrature, applied to x^2 on [1, 2], does not return the expected value?"
-    assert abs(simpson(integrand_2, 1.5, 2.1, 123) - 1.4040478730746806) < 1e-10, "The quadrature, applied to 1+sqrt(x) on [1.5, 2.1], does not return the expected value?"
+    assert abs(simpson(integrand_1, 0, 1, 10) - 1/3) < 1e-10, "The quadrature, applied to x^2 on [0, 1], does not return the expected value?"
+    assert abs(simpson(integrand_1, 1, 2, 10) - 7/3) < 1e-10, "The quadrature, applied to x^2 on [1, 2], does not return the expected value?"
+    assert abs(simpson(integrand_2, 1.5, 2.1, 123) - 1.4040478730749175) < 1e-10, "The quadrature, applied to 1+sqrt(x) on [1.5, 2.1], does not return the expected value?"
 
     __msg__.good("Well done!")

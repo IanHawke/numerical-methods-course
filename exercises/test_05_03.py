@@ -14,6 +14,6 @@ def test():
     value_exact = lambda a, b: -a**4/4 + 2*a**3/3 - 3*a**2/2 - a + b**4/4 - 2*b**3/3 + 3*b**2/2 + b
     pairs = [(0, 1), (-1, 2), (1.5, 3.6)]
     for (a, b) in pairs:
-        assert np.allclose(simpson(integrand_exact, a, b, 11) - value_exact(a, b), 0), f"The quadrature value does not match for a={a}, b={b}"
+        assert np.allclose(simpson(integrand_exact, a, b, 10) - value_exact(a, b), 0), f"The quadrature value does not match for a={a}, b={b}"
 
     __msg__.good("Well done!")

@@ -121,9 +121,9 @@ Write a function to approximate
 \\]
 It should use the simple approximation
 \\[
-  I \simeq \Delta x \sum\_{i=0}^{N-1} f(x\_{i})
+  I \simeq \Delta x \sum\_{i=0}^{\text{nstrips}-1} f(x\_{i})
 \\]
-where \\(N\\) is the number of strips and \\(\\Delta x\\) their width.
+where \\(\text{nstrips}\\) is the number of strips and \\(\\Delta x\\) their width.
 
 Modify the skeleton code so that
 
@@ -132,7 +132,7 @@ Modify the skeleton code so that
 - the function uses a `numpy` function to compute the sum;
 - the function returns the quadrature.
 
-Make sure the function defined is called `quadrature` and that it takes as arguments the integrand `f`, the start `a` and end `b` of the domain, and the number of strips `N`.
+Make sure the function defined is called `quadrature` and that it takes as arguments the integrand `f`, the start `a` and end `b` of the domain, and the number of strips `nstrips`.
 
 <codeblock id="03_05">
 
@@ -179,9 +179,9 @@ This has the wrong start point. Remember, Python indexing starts from zero, so t
 
 Write a function to implement Simpson's Rule which approximates the quadrature as
 \\[
-  I \simeq \frac{\Delta x}{3} \left[ f(x\_0) + f(x\_N) + 4 \sum\_{i \\text{ odd}} f(x\_{i}) + 2 \sum\_{i \\text{ even}} f(x\_{i}) \right].
+  I \simeq \frac{\Delta x}{3} \left[ f(x\_0) + f(x\_{2 \text{nstrips}}) + 4 \sum\_{i \\text{ odd}} f(x\_{i}) + 2 \sum\_{i \\text{ even}} f(x\_{i}) \right].
 \\]
-Here \\(N\\) is the number of gridpoints, which includes one at the end, and \\(\\Delta x\\) the grid spacing. The first and last points do not appear in the sums.
+Here \\(\text{nstrips}\\) is the number of strips, and \\(\\Delta x\\) the grid spacing. In terms of gridpoints, there must be three gridpoints in each strip, one at each end and one in the middle. This means the total number of gridpoints is \\(2 \text{nstrips} + 1\\), which includes one at the end. The first and last points do not appear in the sums.
 
 Modify the skeleton code so that
 
@@ -190,11 +190,11 @@ Modify the skeleton code so that
 - the function uses a `numpy` function to compute the sum;
 - the function returns the quadrature.
 
-Make sure the function defined is called `simpson` and that it takes as arguments the integrand `f`, the start `a` and end `b` of the domain, and the number of strips `N`.
+Make sure the function defined is called `simpson` and that it takes as arguments the integrand `f`, the start `a` and end `b` of the domain, and the number of strips `nstrips`.
 
 <codeblock id="03_07">
 
-Compare your function to the trapezoidal rule code examples on the slide. Remember, we are using the Riemann integral, not the trapezoidal rule, so we do not want a gridpoint at the end of the domain.
+Compare your function to the trapezoidal rule code examples on the slide.
 
 </codeblock>
 
